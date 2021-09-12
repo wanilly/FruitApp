@@ -1,13 +1,11 @@
-
 package com.example.lab2;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class Main {
-	public static <Fruit> void main(String[] args) {
+	public static void main(String[] args) {
 		List<Fruit> fl = new ArrayList<Fruit>();
 		System.out.println("fruit list (ordered by name)");
 		Fruit f1 = new Fruit(101, "Apple", 1000);
@@ -31,7 +29,7 @@ public class Main {
 		Fruit f10 = new Fruit(101, "Durian", 1200);
 		fl.add(f10);
 		
-		Collections.sort(fl, new FruitComparator());
+		Collections.sort(fl, new Fruit());
 		
 		for (Fruit s : fl) {
 			System.out.println(s.toString());

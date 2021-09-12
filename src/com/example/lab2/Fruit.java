@@ -1,15 +1,18 @@
 package com.example.lab2;
 
-public abstract class Fruit implements Comparator<Fruit>{
+import java.util.Comparator;
+
+public class Fruit implements Comparator<Fruit>{
 	int no;
 	String name;
 	int price;
-	int price2;
 	
-	public void Fruit(int i, String c, int j) {
-		this.no = i;
-		this.name = c;
-		this.price = j;
+	Fruit(){};
+	
+	public Fruit(int no, String name, int price) {
+		this.no = no;
+		this.name = name;
+		this.price = price;
 	
 	}
 	@Override
@@ -42,14 +45,7 @@ public abstract class Fruit implements Comparator<Fruit>{
 	public int compare(Fruit o1, Fruit o2) {
 		return o1.name.compareTo(o2.name);
 	}
-}
-
-
-public class FruitComparatorDesc implements Comparator<Fruit> {
 	
-	@Override
-	public int compare(Fruit o1, Fruit o2) {
-		return o2.name.compareTo(o1.name);
-	}
+
 }
 
